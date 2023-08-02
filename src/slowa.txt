@@ -1,0 +1,100 @@
+łóżko - bed
+poduszka - pillow
+koc - blanket
+szafa - wardrobe
+szuflada - drawer
+wieszak - hanger
+garderoba - closet
+płaszcz - coat
+kapelusz - hat
+rękawiczki - gloves
+skarpetki - socks
+buty - shoes
+trampki - sneakers
+sandały - sandals
+kozaki - boots
+krawat - tie
+sukienka - dress
+koszula - shirt
+spodnie - pants
+spódnica - skirt
+kurtka - jacket
+sweter - sweater
+szalik - scarf
+portfel - wallet
+torebka - purse
+klucze - keys
+telefon - phone
+ładowarka - charger
+laptop - laptop
+tablet - tablet
+aparat fotograficzny - camera
+regał na książki - bookcase
+abażur - lampshade
+lustro - mirror
+dywan - rug
+poduszka dekoracyjna - cushion
+wazon - vase
+obraz - painting
+zegar - clock
+kalendarz - calendar
+długopis - pen
+ołówek - pencil
+gumka do ścierania - eraser
+linijka - ruler
+notes - notebook
+plecak - backpack
+parasolka - umbrella
+nożyczki - scissors
+klej - glue
+taśma klejąca - tape
+papier - paper
+koperta - envelope
+mapa - map
+paszport - passport
+bilet - ticket
+pieniądze - money
+karta kredytowa - credit card
+portfel - wallet
+zegarek - watch
+pasek - belt
+biżuteria - jewelry
+kolczyki - earrings
+naszyjnik - necklace
+bransoletka - bracelet
+pierścionek - ring
+kapelusz - hat
+okulary przeciwsłoneczne - sunglasses
+rękawiczki - gloves
+szalik - scarf
+krem do opalania - sunscreen
+balsam - lotion
+środek odstraszający owady - insect repellent
+ręcznik - towel
+koc - blanket
+apteczka pierwszej pomocy - first aid kit
+latarka - flashlight
+kompas - compass
+łyżka - spoon
+widelec - fork
+nóż - knife
+talerz - plate
+filiżanka - cup
+szklanka - glass
+lodówka - refrigerator
+mikrofalówka - microwave
+piekarnik - oven
+kuchenka - stove
+zlew - sink
+kran - faucet
+ręcznik - towel
+mydło - soap
+szampon - shampoo
+szczoteczka do zębów - toothbrush
+pasta do zębów - toothpaste
+lustro - mirror
+grzebień - comb
+szczotka do włosów - hairbrush
+toaleta - toilet
+prysznic - shower
+wanna - bathtub
