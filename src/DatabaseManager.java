@@ -1,7 +1,6 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseManager {
     private static final String DB_URL = "jdbc:sqlite:C:/Programowanie/nauka/portfolio/SQLlite/mydatabase.db";
@@ -54,6 +53,56 @@ public class DatabaseManager {
             deleteZestawSlowoStatement.setInt(1, idZestawu);
             deleteZestawSlowoStatement.executeUpdate();
         }
+    }
+    public static List<Zestaw> getAllZestawy() throws SQLException {
+        List<Zestaw> zestawy = new ArrayList<>();
+
+        String selectQuery = "SELECT id, nazwa FROM zestaw";
+
+        try (Connection connection = getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(selectQuery)) {
+
+            while (resultSet.next()) {
+                int idZestawu = resultSet.getInt("id");
+                String nazwaZestawu = resultSet.getString("nazwa");
+
+                // Pobranie słów przypisanych do tego zestawu
+                List<Slowo> slowaZestawu = getSlowaZestawu(idZestawu);
+
+                Zestaw zestaw = new Zestaw(idZestawu, nazwaZestawu, slowaZestawu);
+                zestawy.add(zestaw);
+            }
+        }
+
+        return zestawy;
+    }
+
+    private static List<Slowo> getSlowaZestawu(int idZestawu) throws SQLException {
+        List<Slowo> slowaZestawu = new ArrayList<>();
+
+        String selectQuery = "SELECT s.id, s.slowo_polskie, s.slowo_angielskie " +
+                "FROM slowo s " +
+                "JOIN zestaw_slowo zs ON s.id = zs.id_slowa " +
+                "WHERE zs.id_zestawu = ?";
+
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
+
+            preparedStatement.setInt(1, idZestawu);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int idSlowa = resultSet.getInt("id");
+                String slowoPolskie = resultSet.getString("slowo_polskie");
+                String slowoAngielskie = resultSet.getString("slowo_angielskie");
+
+                Slowo slowo = new Slowo(idSlowa, slowoPolskie, slowoAngielskie);
+                slowaZestawu.add(slowo);
+            }
+        }
+
+        return slowaZestawu;
     }
 
 
